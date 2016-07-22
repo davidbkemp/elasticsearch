@@ -121,6 +121,9 @@ The following parameters are supported:
 `weight`::
     A positive integer or a string containing a positive integer,
     which defines a weight and allows you to rank your suggestions.
+    Scoring is done to 24 bits of precision, and so different weights above 2^24
+    (i.e. 16777216) will often get the same score and have an arbitrary ranking
+    relative to each other.
     This field is optional.
 
 NOTE: Even though you will lose most of the features of the
